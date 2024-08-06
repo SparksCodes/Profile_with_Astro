@@ -1,3 +1,6 @@
+# Profile_with_Astro
+My personal profile done using Astro
+
 # Astro Starter Kit: Basics
 
 ```sh
