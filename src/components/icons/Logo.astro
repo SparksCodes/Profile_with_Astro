@@ -1,0 +1,58 @@
+---
+interface Props {
+  fill?: string;
+  width?: string;
+  colorStroke?: string;
+  widthStroke?: string;
+}
+
+const { fill, width, colorStroke } = Astro.props;
+---
+
+<svg
+  width={width}
+  viewBox="0 0 31 26"
+  version="1.1"
+  id="svg1"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <defs id="defs1"></defs>
+  <g id="layer1">
+    <g id="g28" transform="translate(-84.439414,-30.569239)">
+      <g
+        id="g24"
+        transform="translate(-5.9563503,-0.94038733)"
+        style=`fill:#666666;stroke:black`
+      >
+        <path
+          d="m 96,32.640718 c -2.041221,0.01214 -3.73815,1.575213 -3.917592,3.608565 v 0.696599 15.128792 0.696598 C 92.262101,54.804424 93.958957,56.367205 96,56.379321 V 48.466625 40.55393 Z"
+          style=`fill:${fill ? fill : "#666666"};stroke:${colorStroke ? colorStroke: "none"};stroke-width:0.264583px`
+          id="path21"></path>
+        <path
+          d="m 101.95635,32.639932 c -2.18521,5e-5 -3.95659,1.771662 -3.95635,3.956864 v 3.956348 7.912695 c 2.18501,-4.9e-5 3.9563,-1.771342 3.95635,-3.956347 v -3.956348 z"
+          style=`fill:${fill ? fill : "#666666"};stroke:${colorStroke ? colorStroke: "none"};stroke-width:0.264583px`
+          id="path22"></path>
+      </g>
+      <g id="g27" transform="translate(11.83518,-0.94117333)">
+        <path
+          d="M 101.91759,32.709964 C 99.87673,32.722054 98.17994,34.284548 98,36.317496 v 0.697115 3.539319 7.912695 7.912696 c 2.04103,-0.01212 3.7379,-1.574903 3.91759,-3.608049 V 52.074674 40.62266 36.945882 Z"
+          style=`fill:${fill ? fill : "#666666"};stroke:${colorStroke ? colorStroke: "none"};stroke-width:0.264583px`
+          id="path27"></path>
+        <g
+          id="g25"
+          transform="translate(-5.9175903)"
+          style="fill:#666666;stroke:none"
+        >
+          <path
+            d="M 101.91759,32.640718 C 99.87637,32.652858 98.17944,34.215927 98,36.249283 v 0.696599 19.433439 h 3.91759 V 40.55393 Z"
+            style=`fill:${fill ? fill : "#666666"};stroke:${colorStroke ? colorStroke: "none"};stroke-width:0.264583px`
+            id="path24"></path>
+          <path
+            d="m 96,32.640718 c -2.04122,0.01214 -3.73815,1.575209 -3.91759,3.608565 v 0.696599 19.433439 H 96 V 40.55393 Z"
+            style=`fill:${fill ? fill : "#666666"};stroke:${colorStroke ? colorStroke: "none"};stroke-width:0.264583px`
+            id="path24-5"></path>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

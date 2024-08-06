@@ -1,0 +1,141 @@
+---
+export interface Props {
+  company?: string;
+  position?: string;
+  startYear?: string;
+  endYear?: string;
+  address?: string;
+  summary?: string;
+}
+
+const { company, position, startYear, endYear, address, summary } = Astro.props;
+---
+
+<div class="main_container">
+  <h2 class="main_title">{company}</h2>
+  <h3 class="years">{`${startYear} - ${endYear}`}</h3>
+  <h3 class="position_container">{position}</h3>
+  <h4 class="address_container">{address}</h4>
+  <div class="circle"></div>
+  <div class="line"></div>
+  <p class="main_summary">{summary}</p>
+</div>
+
+<style>
+  .main_container {
+    display: grid;
+    max-width: 60vw;
+    grid-template-areas:
+      "year company address"
+      "none line line"
+      "none  position position"
+      "none  summary summary";
+    grid-template-rows: 1.4rem auto auto;
+    grid-template-columns: 9rem auto auto;
+    align-items: start;
+    padding-bottom: 2rem;
+  }
+  .years {
+    grid-area: year;
+    align-self: center;
+    font-weight: 500;
+    color: var(--primary);
+    padding: 0.2rem 1.5rem 1rem 0.2rem;
+  }
+  .address_container {
+    grid-area: address;
+    align-self: center;
+    justify-self: end;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 1rem;
+    font-weight: 400;
+    color: var(--primary);
+  }
+  .main_title,
+  .title_address {
+    grid-area: company;
+    align-self: center;
+    padding-left: 1.5rem;
+    padding-bottom: 1rem;
+    font-weight: 500;
+    border-left: 1px solid var(--primary);
+    color: var(--primary);
+  }
+  .position_container {
+    grid-area: position;
+    align-self: center;
+    padding-left: 1.5rem;
+    padding-bottom: 1rem;
+    font-weight: 500;
+    border-left: 1px solid var(--primary);
+    color: var(--primary);
+  }
+  .main_summary {
+    grid-area: summary;
+    align-self: center;
+    padding-left: 1.5rem;
+    font-weight: 400;
+    line-height: 1.5rem;
+    letter-spacing: 0.04rem;
+    border-left: 1px solid var(--primary);
+    color: var(--primary);
+  }
+  .circle {
+    position: relative;
+    top: -1.5rem;
+    left: 8.74rem;
+    height: 0.7rem;
+    width: 0.7rem;
+    border-radius: 50%;
+    background-color: var(--primary_circle);
+  }
+  .line {
+    grid-area: line;
+    height: 1px;
+    width: 50vw;
+    background-color: var(--primary);
+    margin-left: 1.5rem;
+  }
+  @media (max-width: 480px) {
+    .main_container {
+      display: grid;
+      max-width: 90vw;
+      grid-template-areas:
+        "year company address"
+        "none line line"
+        "none  position position"
+        "none  summary summary";
+      grid-template-rows: 6.2rem auto auto;
+      grid-template-columns: 4rem auto auto;
+      align-items: start;
+      padding-bottom: 1rem;
+    }
+    .years {
+      grid-area: year;
+      align-self: center;
+      font-weight: 500;
+      color: var(--primary);
+      padding: 0.2rem 1.5rem 1rem 0.2rem;
+    }
+    .main_title,
+    .title_address {
+      grid-area: company;
+      align-self: center;
+      padding-left: 1.5rem;
+      padding-bottom: 1rem;
+      font-weight: 500;
+      border-left: 1px solid var(--primary);
+      color: var(--primary);
+    }
+    .line {
+      width: 60vw;
+    }
+    .circle {
+      display: none;
+    }
+    .position_container {
+      padding-top: 1rem;
+    }
+  }
+</style>

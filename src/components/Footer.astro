@@ -1,0 +1,43 @@
+---
+export interface Props {
+  name?: string;
+  description?: string;
+}
+
+const { name = "PM Solutions" } = Astro.props;
+
+const date = new Date().getFullYear();
+---
+
+<footer class="main_footer">
+  <p class="footer_title">{name}</p>
+  <span class="footer_span"> - </span>
+  <p class="footer_year">{date}</p>
+</footer>
+
+<style>
+  .main_footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 1em;
+    height: 2rem;
+    margin-top: 2rem;
+    color: var(--primary);
+  }
+  .footer_title {
+    font-weight: 500;
+  }
+  .footer_year {
+    font-weight: 600;
+  }
+  @media (max-width: 480px) {
+    .main_footer {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+</style>

@@ -1,0 +1,48 @@
+---
+import ExperienceCardTwo from "./ExperienceCardTwo.astro";
+import { getI18N } from "@/i18n";
+
+const { currentLocale } = Astro;
+const i18n = getI18N({ currentLocale });
+---
+
+<section class="experience">
+  <h1 class="experience_title">{i18n.basics.experience.toUpperCase()}</h1>
+  <div class="experience_container">
+    {
+      i18n.work.map((job, index) => (
+        <ExperienceCardTwo
+          i={index}
+          company={job.company}
+          address={job.address}
+          position={job.position}
+          startYear={job.startDate}
+          endYear={job.endDate}
+          summary={job.summary}
+        />
+      ))
+    }
+  </div>
+</section>
+
+<style>
+  .experience {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .experience_title {
+    padding: 1rem;
+    font-size: 1.5rem;
+    font-weight: 900;
+    letter-spacing: 0.1rem;
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+    color: var(--primary);
+  }
+  .experience_container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+</style>

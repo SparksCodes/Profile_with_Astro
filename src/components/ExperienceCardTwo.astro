@@ -1,0 +1,151 @@
+---
+export interface Props {
+  company?: string;
+  position?: string;
+  startYear?: string;
+  endYear?: string;
+  address?: string;
+  summary?: string;
+  i: number;
+}
+
+const { i, company, position, startYear, endYear, address, summary } =
+  Astro.props;
+---
+
+<section class="main_container">
+  <div class="container">
+    <input type="checkbox" name="accordion" id=`cb${i}` />
+    <label for=`cb${i}` class="container__label">
+      <div class="container_years">
+        <p>{endYear}</p>
+        <p>{startYear}</p>
+      </div>
+      <div class="skill">
+        <p class="position">{position}</p>
+        <p class="company">{company}</p>
+      </div>
+    </label>
+    <div class="container__content">
+      <hr />
+      <p class="address">{address}</p>
+      <p>{summary}</p>
+    </div>
+  </div>
+</section>
+
+<style>
+  .container input {
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
+  }
+  .container__content {
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.35s;
+  }
+  .container input:checked ~ .container__content {
+    max-height: 11rem;
+  }
+  .main_container {
+    box-shadow: 3px 3px 10px var(--primary);
+    color: var(--primary);
+    border: 1px solid var(--primary);
+    border-radius: 1rem;
+    overflow: hidden;
+    margin: auto;
+    width: 60%;
+    padding: 0 1rem;
+    background-color: var(--bg-primary);
+  }
+  .container {
+    padding: 0 0.5rem;
+  }
+  .container_years {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .container_years p {
+    font-size: 1.2rem;
+    font-weight: 500;
+  }
+  .skill {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 1.2rem;
+  }
+  .position {
+    font-size: 1.4rem;
+    font-weight: 500;
+  }
+  .container__label {
+    display: flex;
+    color: var(--primary);
+    background-color: var(--bg-primary);
+    cursor: pointer;
+  }
+  .container__label {
+    justify-content: flex-start;
+    gap: 2rem;
+    padding: 0.5rem;
+  }
+  .container__label::after {
+    content: url(/cross.svg);
+    width: 2.3rem;
+    height: 3rem;
+    justify-content: center;
+    align-content: center;
+    margin-top: auto;
+    margin-left: auto;
+    transform: rotate(0deg);
+    transition: all 0.35s;
+  }
+  .container input:checked + .container__label::after {
+    transform: rotate(45deg);
+  }
+  .container__content p {
+    line-height: 1.5rem;
+    letter-spacing: 0.04rem;
+    margin: 0;
+    padding: 0.5rem 2rem;
+  }
+  .container__content .address {
+    display: grid;
+    place-items: end;
+  }
+  hr {
+    width: 95%;
+    margin: auto;
+  }
+  .address {
+    font-size: 0.8rem;
+    font-weight: 800;
+  }
+
+  @media (max-width: 480px) {
+    .main_container {
+      padding: 0 0.3rem;
+      position: relative;
+      left: 0.8rem;
+      right: auto;
+      width: 100vw;
+    }
+    .skill {
+      font-size: 0.8rem;
+    }
+    .position {
+      font-size: 1rem;
+    }
+    .container input:checked ~ .container__content {
+      max-height: 22rem;
+    }
+    .container__content p {
+      line-height: 1.2rem;
+      letter-spacing: 0;
+      padding: 0.5rem 1.3rem;
+    }
+  }
+</style>

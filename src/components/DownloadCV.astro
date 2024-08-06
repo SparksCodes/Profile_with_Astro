@@ -1,0 +1,37 @@
+---
+const fileUrl = "../cv/cv.pdf";
+
+import { getI18N } from "@/i18n";
+
+const { currentLocale } = Astro;
+const i18n = getI18N({ currentLocale });
+---
+
+<div class="btnCv">
+  <a href={fileUrl} target="_blank" download="cv.pdf" class="download-button">
+    {i18n.basics.downloadCV}
+  </a>
+</div>
+
+<style>
+  .download-button {
+    display: inline-block;
+    padding: 0.8rem 1.6rem;
+    color: var(--primary_circle);
+    background-color: var(--secondary);
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    box-shadow: 3px 3px 10px var(--primary);
+  }
+
+  .download-button:hover {
+    background-color: var(--bg-secondary);
+  }
+
+  @media (max-width: 480px) {
+    .download-button {
+      padding: 0.9rem 1rem;
+    }
+  }
+</style>

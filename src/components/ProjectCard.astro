@@ -1,0 +1,115 @@
+---
+import SvgGithub from "./SvgGithub.astro";
+import icons from "@/data/icons";
+import Link from "./Link.astro";
+
+export interface Props {
+  title?: string;
+  description?: string;
+  gitHref: string;
+  tech: string[];
+}
+
+const { title, description, gitHref, tech } = Astro.props;
+---
+
+<div class="main_container">
+  <div class="main_header">
+    <h2 class="main_title">{title}</h2>
+    <Link href={gitHref} class:list={"place"}>
+      <SvgGithub color="#494949da" />
+    </Link>
+  </div>
+  <div class="description">
+    <p>{description}</p>
+  </div>
+  <div class="container_icons">
+    <span class="icon_note"></span>
+    <div class="icons">
+      {
+        tech.map((icon: string) => (
+          <div class="icon_tooltip">
+            <h3 class="tootltip">{icons[icon].name}</h3>
+            <img src={icons[icon].path} alt={icons[icon].alt} />
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</div>
+
+<style>
+  .main_container {
+    border: 0.1rem solid var(--primary);
+    border-radius: 1rem;
+    padding: 1rem;
+    width: 30rem;
+    background-color: var(--bg-primary);
+    box-shadow: 3px 3px 10px var(--primary);
+  }
+  .main_title {
+    color: var(--primary);
+    font-weight: 500;
+  }
+  .description {
+    font-size: 1rem;
+    color: var(--primary);
+    font-weight: 500;
+    line-height: 1.5rem;
+    padding-bottom: 1.5rem;
+    letter-spacing: 0.04rem;
+  }
+  .main_header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.2rem;
+  }
+  .container_icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .icons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+  }
+  .icon_tooltip {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .icons h3 {
+    justify-content: center;
+    font-size: 0.7rem;
+    padding: 0.2em 0.2em;
+    border-radius: 0.3rem;
+    background-color: transparent;
+    transform: translate(0px, 25px);
+    opacity: 0;
+    transition:
+      transform 0.2s ease-in-out,
+      opacity 0.4s ease;
+    color: var(--primary);
+  }
+  .icons > div:hover h3 {
+    transform: translate(0px, 0px);
+    display: inline-block;
+    opacity: 1;
+  }
+  img {
+    height: 2rem;
+    width: 2rem;
+  }
+  @media (max-width: 480px) {
+    .main_container {
+      margin-left: 3rem;
+      width: 23rem;
+    }
+  }
+</style>

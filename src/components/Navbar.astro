@@ -1,0 +1,106 @@
+---
+import { getI18N } from "@/i18n";
+import Logo from "./icons/Logo.astro";
+import SpanishFlag from "./icons/SpanishFlag.astro";
+import BritishFlag from "./icons/BritishFlag.astro";
+const currentPath = Astro.url.pathname;
+
+const { currentLocale } = Astro;
+const i18n = getI18N({ currentLocale });
+---
+
+<nav>
+  <div class="logo">
+    <a href="/" rel="noopener noreferrer" target="_self" aria-label="logo">
+      <Logo fill="#b0b0b0ff" width="3rem" />
+    </a>
+  </div>
+  <div class="nav_menu">
+    <!-- <div class="blog_nav">
+      <a href="/blog" target="_blank" rel="noopener noreferrer"> Blog</a>
+    </div> -->
+    <div class="nav_flags">
+      <a
+        href="/"
+        rel="noopener noreferrer"
+        target="_self"
+        aria-label="Spanish flag"
+        class={currentPath === "/" ? "isSelected" : "noSelected"}
+      >
+        <SpanishFlag />
+      </a>
+      <a
+        href="/en"
+        rel="noopener noreferrer"
+        target="_self"
+        aria-label="British flag"
+        class={currentPath === "/en/" ? "isSelected" : "noSelected"}
+      >
+        <BritishFlag />
+      </a>
+    </div>
+  </div>
+</nav>
+
+<style>
+  a {
+    width: 3rem;
+    height: 2rem;
+  }
+  nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 4.5rem;
+    padding-bottom: 8rem;
+  }
+  .logo {
+    display: flex;
+    flex-direction: row;
+    padding-top: 1rem;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .nav_flags {
+    display: flex;
+    flex-direction: row;
+    padding-top: 2rem;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 3rem;
+  }
+  .nav_flags img {
+    width: 3rem;
+  }
+  .blog_nav {
+    font-size: 1.2rem;
+    font-family: "Montserrat";
+    color: var(--secondary);
+  }
+
+  .nav_flags a.isSelected {
+    opacity: 0.3;
+  }
+  .nav_flags a.noSelected {
+    opacity: 1;
+  }
+
+  @media (max-width: 480px) {
+    nav {
+      left: auto;
+      right: auto;
+      position: absolute;
+      z-index: 10;
+    }
+    .nav_menu {
+      display: flex;
+      flex-direction: row;
+      width: 50vw;
+      justify-content: flex-end;
+      gap: 4rem;
+    }
+
+    nav a {
+      display: block;
+    }
+  }
+</style>

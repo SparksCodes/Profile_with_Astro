@@ -1,0 +1,211 @@
+---
+import { getI18N } from "@/i18n";
+import DownloadCV from "./DownloadCV.astro";
+import SvgGithub from "./SvgGithub.astro";
+import SvgLinkedIn from "./SvgLinkedIn.astro";
+import SvgWhatsApp from "./SvgWhatsApp.astro";
+import Blinker from "./Blinker.astro";
+
+const { currentLocale } = Astro;
+const i18n = getI18N({ currentLocale });
+---
+
+<section class="main">
+  <div class="main_image">
+    <img src={i18n.basics.image} alt="image_profile" />
+    <Blinker />
+  </div>
+  <section class="description">
+    <p class="main_title">
+      {i18n.basics.greet}
+      <strong id="name">{i18n.basics.name}</strong>! <span class="title_hand"
+        >✋</span
+      >
+    </p>
+    <br />
+    <p class="main_paragraph">
+      {i18n.basics.firstSummary}
+      <span id="imp">{i18n.basics.label}</span>
+      {i18n.basics.summary}
+      <span id="imp">{i18n.basics.highlight}</span>
+      {i18n.basics.secondSummary}
+    </p>
+
+    <div class="first_group">
+      <div class="nav_icons">
+        <div class="whatapp_icon">
+          <a
+            href="https://wa.me/+34629640738"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="WhatApp"
+          >
+            <SvgWhatsApp
+              color={"#494949da"}
+              style={"height: 4rem; width: 4rem"}
+            />
+          </a>
+        </div>
+        <div class="linkedin_icon">
+          <a
+            href="https://www.linkedin.com/in/pedromonserrat/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn"
+          >
+            <SvgLinkedIn
+              color={"#494949da"}
+              style={"height: 3rem; width: 3rem"}
+            />
+          </a>
+        </div>
+        <div class="git_icon">
+          <a
+            href="https://github.com/SparksCodes"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="GitHub"
+          >
+            <SvgGithub
+              color={"#494949da"}
+              style={"height: 3rem; width: 3rem"}
+            />
+          </a>
+        </div>
+      </div>
+      <DownloadCV />
+    </div>
+  </section>
+</section>
+
+<style>
+  .main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-bottom: 10rem;
+    gap: 2rem;
+  }
+  .main_image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  #name {
+    background: linear-gradient(45deg, #ac8b07, #ffd000);
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+  .description {
+    height: 28rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .main_title,
+  .main_paragraph {
+    font-size: 1.75rem;
+    line-height: 2.5rem;
+    color: var(--primary);
+  }
+  #imp {
+    position: relative;
+    font-weight: 700;
+  }
+  #imp::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 12px;
+    background: rgb(238, 210, 53);
+    left: 0;
+    bottom: 0;
+    opacity: 0.5;
+    z-index: -1;
+  }
+
+  strong {
+    font-size: 2rem;
+    letter-spacing: 0.2rem;
+    font-weight: 900;
+    color: var(--accent-light);
+  }
+  .title_hand {
+    padding-left: 1rem;
+    animation-duration: 0.2s;
+    animation-name: shakeHand;
+    animation-iteration-count: 4;
+    transition-duration: 0.3s;
+    transition-timing-function: cubic-bezier(0.5, -1, 0.5, 2);
+    transition-delay: 0.1s;
+  }
+  .nav_menu {
+    display: flex;
+    flex-direction: row;
+    padding: 1rem;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .first_group {
+    padding-top: 2rem;
+  }
+  .first_group,
+  .nav_icons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 3rem;
+  }
+  @keyframes shakeHand {
+    100% {
+      transform: rotateX(50deg);
+      display: inline-block;
+    }
+
+    0% {
+      transform: rotateX(-50deg);
+      display: inline-block;
+    }
+  }
+  @media (max-width: 480px) {
+    .main {
+      width: 93vw;
+      display: flex;
+      flex-direction: column;
+      padding-bottom: 2rem;
+      position: relative;
+      left: auto;
+      right: auto;
+    }
+    .main_image {
+      padding-top: 7rem;
+    }
+    img {
+      height: 22rem;
+      width: 28rem;
+    }
+    .description {
+      height: 35rem;
+    }
+    .main_title,
+    .main_paragraph {
+      font-size: 1.8rem;
+      line-height: 2.7rem;
+    }
+    #imp::after {
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 12px;
+      background: none;
+    }
+    .first_group {
+      position: relative;
+      margin-left: -22px;
+    }
+    .first_group,
+    .nav_icons {
+      gap: 2rem;
+    }
+  }
+</style>

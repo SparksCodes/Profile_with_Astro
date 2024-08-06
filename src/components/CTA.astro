@@ -1,0 +1,88 @@
+---
+import { getI18N } from "@/i18n";
+
+const { currentLocale } = Astro;
+const i18n = getI18N({ currentLocale });
+---
+
+<div class="main__container">
+  <div class="container__title">
+    {i18n.basics.cta}
+  </div>
+  <div class="container__img">
+    <svg
+      width="70mm"
+      height="51mm"
+      viewBox="0 0 84.999997 50.999998"
+      version="1.1"
+      id="svg1"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        class="path_line"
+        d="m 1.7357631,47.237109 c 7.573007,3.251362 18.6076799,2.765673 26.1597049,-1.627255 5.641334,-3.281501 10.577955,-9.86052 10.717096,-16.385361 0.09699,-4.548367 -2.774771,-9.987029 -6.977012,-11.73008 -4.362607,-1.809568 -10.545039,-0.0062 -13.736147,3.475659 -2.824701,3.082115 -3.712888,8.563568 -2.007172,12.38049 1.715792,3.839468 6.469087,6.15781 10.624651,6.803377 6.758874,1.049995 13.948208,-1.798603 19.823201,-5.30136 C 51.495372,31.778922 56.327871,27.273902 58.7037,21.762115 60.39523,17.83786 61.73744,12.563381 59.435432,8.96313 57.353943,5.7077621 52.423034,3.8607531 48.653028,4.7075571 44.668543,5.6025381 40.91517,9.613365 40.275325,13.646689 c -0.655374,4.131219 1.683271,9.306355 5.326011,11.362308 5.938234,3.351523 14.205021,0.827861 20.344001,-2.140009 5.375667,-2.598849 9.606656,-7.59324 12.53341,-12.797654 1.432374,-2.5470799 2.165492,-8.494965 2.165492,-8.494965"
+        id="path1"></path>
+    </svg>
+  </div>
+</div>
+
+<style>
+  .main__container {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 30%;
+    top: 31rem;
+    left: 27rem;
+    line-height: 4rem;
+  }
+  .container__title {
+    font-family: "Kristi";
+    letter-spacing: 0.2rem;
+    font-size: 5rem;
+    font-weight: 400;
+    padding-top: 6rem;
+    color: var(--secondary);
+    text-shadow: 2px 2px 4px rgb(0, 0, 0);
+  }
+
+  .path_line {
+    fill: none;
+    stroke: var(--primary);
+    stroke-width: 1;
+  }
+
+  .path_line {
+    --totalLenght: 242.23146057128906;
+
+    stroke-dasharray: var(--totalLenght);
+    stroke-dashoffset: var(--totalLenght);
+    transition: stroke-dashoffset 1s ease-in-out;
+    animation: draw 3s ease-in-out 5 forwards;
+  }
+
+  @keyframes draw {
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+  @media (max-width: 1800px) {
+    .main__container {
+      display: block;
+      top: 36rem;
+      left: 9rem;
+    }
+    .container__img {
+      position: absolute;
+      top: -2rem;
+      left: 16rem;
+    }
+  }
+  @media (max-width: 480px) {
+    .main__container {
+      display: none;
+    }
+  }
+</style>

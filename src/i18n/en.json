@@ -1,0 +1,128 @@
+{
+  "basics": {
+    "name": "Pedro",
+    "greet": "¡Hi, I'm",
+    "label": "full stack",
+    "image": "../profile_face.webp",
+    "firstSummary": "Aspiring to",
+    "summary": "developer with a solid expierence as technician at the industrial sector. Highlighting me",
+    "secondSummary": "to whatever situation or project.",
+    "highlight": "high capacity of adaptation",
+    "projects": "Projects",
+    "experience": "Experience",
+    "downloadCV": "Donwload CV",
+    "cta": "Let's Talk!!",
+    "blinker": "Open to Work",
+
+    "profiles": [
+      {
+        "network": "",
+        "username": "",
+        "url": ""
+      }
+    ]
+  },
+  "work": [
+    {
+      "company": "Bit2me",
+      "address": "Alicante",
+      "position": "Frontend developer with Flutter",
+      "startDate": "2024",
+      "endDate": "2024",
+      "summary": "I did my cross-platform application development internship with the development team, where I worked on the creation of an application using Flutter. This experience allowed me to contribute to the design and functionality of the app, improve my skills in cross-platform development and deepen the use and capabilities of Flutter."
+    },
+    {
+      "company": "PaynoPain Solutions S.L.",
+      "address": "Castellón de la Plana",
+      "position": "Frontend developer with React",
+      "startDate": "2023",
+      "endDate": "2024",
+      "summary": "I did my web application development internship with the frontend team, where I worked on the creation of a section of the payment system application based on React. This experience allowed me to contribute to the design and functionality of the app, improve my frontend development skills and deepen my understanding of how the payment system works."
+    },
+    {
+      "company": "Kerajet S.A.",
+      "address": "Almazora, Castellón de la Plana",
+      "position": "International Field Service Engineer",
+      "startDate": "2016",
+      "endDate": "2023",
+      "summary": "Fitting and start-up of inkjet machines for ceramics, tableware, etc., both nationally and internationally. Finding and sort the breakdowns out, electrical, mechanical, ink system or hydraulic, as well as firmware and software. Advice and training to customers on operation and maintenance plans. Ramp-up and commissioning of machinery."
+    },
+    {
+      "company": "Thistle Seafoods Ltd",
+      "address": "Peterhead, Aberdeen - UK",
+      "position": "Electrical Engineer",
+      "startDate": "2015",
+      "endDate": "2016",
+      "summary": "Electrical and mechanical maintenance of the factory, as well as the find out and sort the breakdowns out in the production lines. Carrying out the preventive maintenance plan in the different machines, also making modifications in the electrical panels."
+    },
+    {
+      "company": "SSP Group",
+      "address": "Dublin - Ireland / Aberdeen - Scotland",
+      "position": "Kitchen assistant",
+      "startDate": "2013",
+      "endDate": "2015",
+      "summary": "During this period, I was taking English courses in Dublin and Aberdeen (Scotland), which allowed me to significantly improve my language skills. At the same time, I worked as a kitchen assistant, developing multitasking skills in a dynamic environment."
+    },
+    {
+      "company": "Interior Ministry 'Correctional Facility'",
+      "address": "Albocasser, Castellón de la Plana",
+      "position": "Electrician",
+      "startDate": "2008",
+      "endDate": "2013",
+      "summary": "Performing electrical maintenance in the prison facilities, in addition to carrying out new installations. Management of the purchase of materials and warehouse inventory control."
+    },
+    {
+      "company": "Climelcas S.L.L.",
+      "address": "Castellón de la Plana",
+      "position": "Owner",
+      "startDate": "2006",
+      "endDate": "2008",
+      "summary": "General management of the company, as well as the organization of works, personnel and bureaucratic procedures."
+    },
+    {
+      "company": "Estudio Cerámico S.L.",
+      "address": "San Juan de Moró, Castellón de la Plana",
+      "position": "Electro-mechanic",
+      "startDate": "1999",
+      "endDate": "2006",
+      "summary": "Electrical and mechanical maintenance of the factory, identifying and sort the breakdowns out in the different production lines. Implementation of the preventive maintenance plan of the plant. Programming of PLCs, frequency driver and installation. Handling of troubleshooting PID's controls, hydraulic and pneumatic installations."
+    }
+  ],
+
+  "education": [
+    {
+      "institution": "",
+      "url": "",
+      "area": "",
+      "studyType": "",
+      "startDate": "",
+      "endDate": "",
+      "score": "",
+      "courses": [""]
+    }
+  ],
+
+  "certificates": [
+    {
+      "name": "",
+      "date": "",
+      "issuer": "",
+      "url": ""
+    }
+  ],
+
+  "projects": [
+    {
+      "name": "DRIPPINK",
+      "description": "App for calculating the ink discharge of a printer in the industrial field.",
+      "url": "https://github.com/SparksCodes/Ink-Discharge-Calculator-Flutter",
+      "tech": ["flutter", "dart"]
+    },
+    {
+      "name": "PSW",
+      "description": "It is a password generator, with different setting options.",
+      "url": "https://github.com/SparksCodes/Password_Generator",
+      "tech": ["typescript", "html", "css", "react", "electron"]
+    }
+  ]
+}

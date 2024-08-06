@@ -1,0 +1,26 @@
+---
+interface Props {
+  href: string;
+  target?: string | null;
+  classes?: string;
+  isOpen?: boolean;
+}
+
+const {
+  href,
+  target = "_blank",
+  classes,
+  isOpen = false,
+  ...rest
+} = Astro.props as Props;
+---
+
+<a
+  href={href}
+  target={target}
+  aria-label="Link de red social"
+  class:list={["link", classes, { open: isOpen }]}
+  {...rest}
+>
+  <slot />
+</a>

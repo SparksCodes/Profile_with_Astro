@@ -1,0 +1,129 @@
+{
+  "basics": {
+    "name": "Pedro",
+    "greet": "¡Hola, soy",
+    "label": "full stack",
+    "image": "../profile_face.webp",
+    "firstSummary":"Aspirante a desarrollador",
+    "summary": "con una sólida experiencia como técnico en el sector industrial. Destacando mi",
+    "secondSummary": "a cualquier situación y proyecto.",
+    "highlight": "alta capacidad de adaptación",
+    "projects": "Proyectos",
+    "experience": "Experiencia",
+    "downloadCV": "Descarga CV",
+    "cta": "Hablemos!!",
+    "blinker": "Disponible para trabajar",
+    
+    "profiles": [
+      {
+        "network": "",
+        "username": "",
+        "url": ""
+      }
+    ]
+  },
+  "work": [
+    {
+      "company": "Bit2me",
+      "address": "Alicante",
+      "position": "Frontend developer con Flutter",
+      "startDate": "2024",
+      "endDate": "2024",
+      "summary": "Realicé mis prácticas de desarrollo de aplicaciones multiplataforma con el equipo de desarrollo, donde trabajé en la creación de una aplicación utilizando Flutter. Esta experiencia me permitió contribuir al diseño y funcionalidad de la app, mejorar mis habilidades en desarrollo multiplataforma y profundizar en el uso y las capacidades de Flutter."
+    },
+    {
+      "company": "PaynoPain Solutions S.L.",
+      "address": "Castellón de la Plana",
+      "position": "Frontend developer con React",
+      "startDate": "2023",
+      "endDate": "2024",
+      "summary": "Realicé mis prácticas de desarrollo de aplicaciones web junto al equipo de frontend, donde trabajé en la creación de una sección de la aplicación del sistema de pagos basada en React. Esta experiencia me permitió contribuir al diseño y funcionalidad de la app, mejorar mis habilidades en desarrollo frontend y profundizar en el funcionamiento del sistema de pagos."
+    },
+    {
+      "company": "Kerajet S.A.",
+      "address": "Almazora, Castellón de la Plana",
+      "position": "Asistencia Técnica Nacional e Internacional",
+      "startDate": "2016",
+      "endDate": "2023",
+      "summary": "Instalación y puesta en marcha de máquinas inkjet para cerámica, vajilla, etc., tanto a nivel nacional como internacional. Localización y solución de averías, eléctricas, mecánicas, sistema de tintas o hidraulicas, así como también las procedentes de firmware y software. Asesoramiento y formación a los clientes acerca del funcionamiento y los planes de mantenimiento."
+    },
+    {
+      "company": "Thistle Seafoods Ltd",
+      "address": "Peterhead, Aberdeen - UK",
+      "position": "Electrical Engineer",
+      "startDate": "2015",
+      "endDate": "2016",
+      "summary": "Mantenimiento eléctrico y mecánico de la fábrica, así como la identificación y resolución de averías en las líneas de producción. Realización del plan de mantenimiento preventivo en las diferentes máquinas, realizando también modificaciones en los cuadros eléctricos."
+    },
+    {
+      "company": "SSP Group",
+      "address": "Dublín - Irlanda / Aberdeen - Escocia",
+      "position": "Kitchen assistant",
+      "startDate": "2013",
+      "endDate": "2015",
+      "summary": "Durante este periodo, estuve realizando cursos de inglés en Dublín y Aberdeen (Escocia), lo que me permitió mejorar significativamente mis habilidades lingüísticas. Al mismo tiempo, trabajaba como asistente de cocina, desarrollando habilidades multitareas en un entorno dinámico."
+    },
+    {
+      "company": "Ministerio del Interior 'Centro Penitenciario'",
+      "address": "Albocasser, Castellón de la Plana",
+      "position": "Electricista",
+      "startDate": "2008",
+      "endDate": "2013",
+      "summary": "Realización de mantenimiento eléctrico en las instalaciones de la prisión, además de llevar a cabo nuevas instalaciones. Gestión de la compra de materiales y control del inventario del almacén."
+    },
+    {
+      "company": "Climelcas S.L.L.",
+      "address": "Castellón de la Plana",
+      "position": "Propietario",
+      "startDate": "2006",
+      "endDate": "2008",
+      "summary": "Gestión general de la empresa, así como la organización de las obras, personal y trámites burocráticos."
+    },
+    {
+      "company": "Estudio Cerámico S.L.",
+      "address": "San Juan de Moró, Castellón de la Plana",
+      "position": "Electromecánico",
+      "startDate": "1999",
+      "endDate": "2006",
+      "summary": "Mantenimiento eléctrico y mecánico de la fábrica, identificación y resolución de averías en las diferentes líneas de producción. Realización del plan de mantenimiento preventivo de la planta. Programación de autómatas, variadores de frecuencia e instalación. Manipulación y resolución de averías en controles PID, instalaciones hidráulicas y neumáticas."
+    }
+  ],
+  
+  "education": [
+    {
+      "institution": "",
+      "url": "",
+      "area": "",
+      "studyType": "",
+      "startDate": "",
+      "endDate": "",
+      "score": "",
+      "courses": [""]
+    }
+  ],
+ 
+  "certificates": [
+    {
+      "name": "",
+      "date": "",
+      "issuer": "",
+      "url": ""
+    }
+  ],
+  
+  "projects": [
+    {
+      "name": "DRIPPINK",
+      "description": "Herramienta para el cálculo de descarga de tinta de una impresora en el ámbito industrial.",
+      "url": "https://github.com/SparksCodes/Ink-Discharge-Calculator-Flutter",
+      "tech": ["flutter", "dart"]
+    },
+    {
+      "name": "PSW",
+      "description": "Generador de contraseñas, con diferentes opciones de ajuste.",
+      "url": "https://github.com/SparksCodes/Password_Generator",
+      "tech": ["typescript", "html", "css", "react", "electron"]
+    }
+  ]
+}
+

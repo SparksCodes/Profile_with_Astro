@@ -1,0 +1,100 @@
+---
+interface Props {
+  title: string;
+  description: string;
+}
+const { title, description } = Astro.props;
+const { currentLocale } = Astro;
+---
+
+<!doctype html>
+<html lang={currentLocale}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content={description} />
+    <meta name="viewport" content="width=device-width" />
+    <!-- <meta name="robots" content="noindex, nofollow" /> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kristi&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>{title}</title>
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>
+
+<style is:global>
+  :root {
+    --primary: #757575ff;
+    --secondary: #ffc90eff;
+    --primary_circle: #494949;
+
+    --bg-primary: #fffeeeff;
+    --bg-secondary: #ffdd55cc;
+    --bg-third: #c7aa37cc;
+
+    --accent: 136, 58, 234;
+    --accent-light: 224, 204, 250;
+    --accent-dark: 57, 7, 101;
+    --accent-gradient: linear-gradient(
+      45deg,
+      rgb(var(--accent)),
+      rgb(var(--accent-light)) 30%,
+      white 60%
+    );
+  }
+
+  @font-face {
+    font-family: "Montserrat";
+    src: url("../fonts/Montserrat-VariableFont_wght.ttf")
+      format("ttf");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+    user-select: none;
+
+    scrollbar-width: thin;
+    scrollbar-color: var(--bg-secondary) transparent;
+    scroll-behavior: smooth;
+  }
+  html {
+    font-family: "Montserrat", sans-serif;
+    background: var(--bg-primary);
+    background-size: 224px;
+    max-width: 80vw;
+    margin: auto;
+
+    background-image: radial-gradient(rgba(126, 118, 0, 0.3) 10%, transparent 0),
+      radial-gradient(rgba(126, 118, 0, 0.3) 10%, transparent 0);
+    background-size: 10px 10px;
+    background-position:
+      0 0,
+      15px 15px;
+
+    /* background-color: #f7f1e6;
+
+    background-image: linear-gradient(
+        #009ab579 1.2000000000000002px,
+        transparent 1.2000000000000002px
+      ),
+      linear-gradient(
+        to right,
+        #009ab57a 1.2000000000000002px,
+        #f7f1e6 1.2000000000000002px
+      );
+    background-size: 24px 24px; */
+  }
+</style>

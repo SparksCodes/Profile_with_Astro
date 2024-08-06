@@ -1,0 +1,60 @@
+---
+import { getI18N } from "@/i18n";
+
+const { currentLocale } = Astro;
+const i18n = getI18N({ currentLocale });
+---
+
+<div class="able_work">
+  <span class="led"></span>
+  <p class="paragraph">{i18n.basics.blinker}</p>
+</div>
+
+<style>
+  .able_work {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0.1rem 1rem;
+    gap: 0.3rem;
+  }
+  .paragraph {
+    display: block;
+    font-size: 1rem;
+    color: var(--primary);
+  }
+  .led {
+    position: relative;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+  }
+  .led::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0.9rem;
+    height: 0.9rem;
+    border-radius: 50%;
+    background-color: rgba(128, 128, 128, 0.5);
+    transform: translate(-50%, -50%);
+    animation: blinking 1.5s infinite alternate-reverse;
+  }
+
+  @keyframes blinking {
+    from {
+      background-color: rgba(128, 128, 128, 0.5);
+      box-shadow: none;
+    }
+    to {
+      background-color: rgb(34, 170, 0);
+      box-shadow:
+        0px 2px 6px rgba(34, 170, 0, 0.8),
+        0px -2px 6px rgba(34, 170, 0, 0.8),
+        2px 0px 6px rgba(34, 170, 0, 0.8),
+        -2px 0px 6px rgba(34, 170, 0, 0.8);
+    }
+  }
+</style>
