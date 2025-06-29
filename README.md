@@ -1,11 +1,8 @@
 # Profile_with_Astro
 My personal profile done using Astro
 
-![page1](https://github.com/user-attachments/assets/27d7fb2a-ac64-47e0-84fc-c5ea2c37e9a8)
-![page2](https://github.com/user-attachments/assets/70e97e32-4859-43fa-b2d8-ce93c13cb350)
-![page3](https://github.com/user-attachments/assets/00555dff-aa8f-47f5-9cbf-aaedd4f5ff47)
+![2025-06-29_19-00](https://github.com/user-attachments/assets/2b3c4711-335d-4ff9-90b6-8d24194a09d6)
 
+![2025-06-29_19-01](https://github.com/user-attachments/assets/cf4b0d7b-b81e-4e71-9304-fbee273de568)
 
-
-
-
+![2025-06-29_19-01_1](https://github.com/user-attachments/assets/8fa1f07f-394a-47b5-bf31-d7a4f721791b)
