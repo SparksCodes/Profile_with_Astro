@@ -1,14 +1,14 @@
 ---
-const fileUrl = "../cv/cv.pdf";
-
 import { getI18N } from "@/i18n";
 
 const { currentLocale } = Astro;
 const i18n = getI18N({ currentLocale });
+const fileUrl =
+  currentLocale === "en" ? "../cv/PM_cv_en.pdf" : "../cv/PM_cv_es.pdf";
 ---
 
 <div class="btnCv">
-  <a href={fileUrl} target="_blank" download="cv.pdf" class="download-button">
+  <a href={fileUrl} target="_blank" download class="download-button">
     {i18n.basics.downloadCV}
   </a>
 </div>
@@ -16,6 +16,7 @@ const i18n = getI18N({ currentLocale });
 <style>
   .download-button {
     display: inline-block;
+    font-weight: 500;
     padding: 0.8rem 1.6rem;
     color: var(--primary_circle);
     background-color: var(--secondary);
@@ -32,6 +33,9 @@ const i18n = getI18N({ currentLocale });
   @media (max-width: 480px) {
     .download-button {
       padding: 0.9rem 1rem;
+      width: 90%;
+      font-size: 1.1rem;
+      font-weight: 600;
     }
   }
 </style>

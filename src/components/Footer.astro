@@ -11,8 +11,8 @@ const date = new Date().getFullYear();
 
 <footer class="main_footer">
   <p class="footer_title">{name}</p>
-  <span class="footer_span"> - </span>
-  <p class="footer_year">{date}</p>
+  <!-- <span class="footer_span"> - </span>
+  <p class="footer_year">{date}</p> -->
 </footer>
 
 <style>
@@ -20,7 +20,7 @@ const date = new Date().getFullYear();
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: center;
     gap: 1em;
     height: 2rem;
     margin-top: 2rem;
@@ -34,9 +34,6 @@ const date = new Date().getFullYear();
   }
   @media (max-width: 480px) {
     .main_footer {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
       justify-content: center;
     }
   }

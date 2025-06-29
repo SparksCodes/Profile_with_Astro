@@ -2,17 +2,26 @@
   "basics": {
     "name": "Pedro",
     "greet": "¡Hi, I'm",
-    "label": "full stack",
+    "label": "cybersecurity",
+    "skill": "full stack",
     "image": "../profile_face.webp",
-    "firstSummary": "Aspiring to",
-    "summary": "developer with a solid expierence as technician at the industrial sector. Highlighting me",
-    "secondSummary": "to whatever situation or project.",
-    "highlight": "high capacity of adaptation",
+    "firstSummary": "Professional transitioning into the field of",
+    "summary": ", with a solid background as a technician at the industrial sector. Trained in",
+    "secondSummary": "development, and known for my",
+    "thirdSummary": "in any situation or project.",
+    "highlight": "high adaptability",
     "projects": "Projects",
     "experience": "Experience",
+    "certificates": "Studies",
     "downloadCV": "Donwload CV",
     "cta": "Let's Talk!!",
-    "blinker": "Open to Work",
+    "coffeeCTA": "• Thank you for valuing my work",
+    "coffeeTitle": "Choose Coffee !!",
+    "oneCoffee": "1 Coffee - 1.50€",
+    "twoCoffee": "2 Coffees - 3.00€",
+    "anotherCoffee": "Custom amount",
+    "close": "Close",
+    "blinker": "Open to work",
 
     "profiles": [
       {
@@ -24,12 +33,20 @@
   },
   "work": [
     {
+      "company": "IES Caminás",
+      "address": "Castellón de la Plana",
+      "position": "Student",
+      "startDate": "2024",
+      "endDate": "2025",
+      "summary": "I completed a Advanced Training in Cybersecurity focused on real-world projects. Throughout the course, we worked on comprehensive network hardening, from securing endpoint devices such as user PCs to implementing VPNs for interconnecting branch offices. We also covered forensic analysis using specialized tools for data recovery; securing production environments with Docker and Kubernetes, complemented by audits based on OWASP standards; and finally, we carried out ethical hacking exercises, executing controlled attacks with various industry tools."
+    },
+    {
       "company": "Bit2me",
       "address": "Alicante",
       "position": "Frontend developer with Flutter",
       "startDate": "2024",
       "endDate": "2024",
-      "summary": "I did my cross-platform application development internship with the development team, where I worked on the creation of an application using Flutter. This experience allowed me to contribute to the design and functionality of the app, improve my skills in cross-platform development and deepen the use and capabilities of Flutter."
+      "summary": "I actively participated in the development of a cross-platform application using Flutter, collaborating with the development team on design, logic, and usability tasks. This experience allowed me to apply modern mobile development practices, enhance the user experience, and strengthen my technical skills in collaborative environments."
     },
     {
       "company": "PaynoPain Solutions S.L.",
@@ -37,7 +54,7 @@
       "position": "Frontend developer with React",
       "startDate": "2023",
       "endDate": "2024",
-      "summary": "I did my web application development internship with the frontend team, where I worked on the creation of a section of the payment system application based on React. This experience allowed me to contribute to the design and functionality of the app, improve my frontend development skills and deepen my understanding of how the payment system works."
+      "summary": "I joined the frontend team to develop key features for a payment web application using React. I contributed to the implementation of reusable components and responsive design, with a strong focus on enhancing the user experience. This experience strengthened my knowledge in frontend development, collaboration with Git, and work within agile methodologies."
     },
     {
       "company": "Kerajet S.A.",
@@ -77,7 +94,7 @@
       "position": "Owner",
       "startDate": "2006",
       "endDate": "2008",
-      "summary": "General management of the company, as well as the organization of works, personnel and bureaucratic procedures."
+      "summary": "Comprehensive management of the company, including project planning and coordination, staff supervision, and handling of administrative and legal procedures. Developed strong skills in leadership, organization, and decision-making in a dynamic, results-oriented environment."
     },
     {
       "company": "Estudio Cerámico S.L.",
@@ -91,15 +108,47 @@
 
   "education": [
     {
-      "institution": "",
-      "url": "",
-      "area": "",
-      "studyType": "",
-      "startDate": "",
-      "endDate": "",
-      "score": "",
-      "courses": [""]
-    }
+    "institution": "IES El Caminás, Castellón de la Plana",
+    "studyType": "Advanced Training in Cybersecurity",
+    "startDate": "2024",
+    "endDate": "2025"
+  },
+  {
+    "institution": "Aula Campus, Burjassot, Valencia",
+    "studyType": "Multiplatform Application Development",
+    "startDate": "2023",
+    "endDate": "2024"
+  },
+  {
+    "institution": "Aula Campus, Burjassot, Valencia",
+    "studyType": "Web Application Development",
+    "startDate": "2021",
+    "endDate": "2023"
+  },
+  {
+    "institution": "ASET International Oil & Gas Trainning Academy, Aberdeen, UK",
+    "studyType": "17th Edition IEE Wiring Regulations, City & Guilds 2382",
+    "startDate": "2014",
+    "endDate": "2014"
+  },
+  {
+    "institution": "IES Serra d'Espadà, Onda, Castellón de la Plana",
+    "studyType": "Regulation Systems and Automatic Controls",
+    "startDate": "2010",
+    "endDate": "2013"
+  },
+  {
+    "institution": "IES Politècnic, Castellón de la Plana",
+    "studyType": "Electrical Engineering",
+    "startDate": "2010",
+    "endDate": "2013"
+  },
+  {
+    "institution": "IES Politècnic, Castellón de la Plana",
+    "studyType": "Industrial Electronics",
+    "startDate": "1994",
+    "endDate": "1999"
+  }
   ],
 
   "certificates": [
@@ -112,6 +161,18 @@
   ],
 
   "projects": [
+    {
+      "name": "INTEGRITYCHECK",
+      "description": "Application to verify and compare file hashes using different algorithms.",
+      "url": "https://github.com/SparksCodes/Password_Generator",
+      "tech": ["javascript", "html", "css", "electron"]
+    },
+    {
+      "name": "CRYPTER",
+      "description": "Bash tool to encrypt, decrypt, and generate secure passwords directly from the terminal.",
+      "url": "https://github.com/SparksCodes/Crypter",
+      "tech": ["bash"]
+    },
     {
       "name": "DRIPPINK",
       "description": "App for calculating the ink discharge of a printer in the industrial field.",

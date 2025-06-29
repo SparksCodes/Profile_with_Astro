@@ -25,7 +25,7 @@ const i18n = getI18N({ currentLocale });
         rel="noopener noreferrer"
         target="_self"
         aria-label="Spanish flag"
-        class={currentPath === "/" ? "isSelected" : "noSelected"}
+        class={currentPath === "/" ? "noSelected" : "isSelected"}
       >
         <SpanishFlag />
       </a>
@@ -34,7 +34,7 @@ const i18n = getI18N({ currentLocale });
         rel="noopener noreferrer"
         target="_self"
         aria-label="British flag"
-        class={currentPath === "/en/" ? "isSelected" : "noSelected"}
+        class={currentPath === "/en/" ? "noSelected" : "isSelected"}
       >
         <BritishFlag />
       </a>
@@ -51,7 +51,10 @@ const i18n = getI18N({ currentLocale });
     display: grid;
     grid-template-columns: 1fr 1fr;
     height: 4.5rem;
-    padding-bottom: 8rem;
+    padding-bottom: 10rem;
+    max-width: 100%;
+    align-items: center;
+    padding: 0 45rem;
   }
   .logo {
     display: flex;
@@ -86,21 +89,35 @@ const i18n = getI18N({ currentLocale });
 
   @media (max-width: 480px) {
     nav {
-      left: auto;
-      right: auto;
-      position: absolute;
-      z-index: 10;
-    }
-    .nav_menu {
-      display: flex;
-      flex-direction: row;
-      width: 50vw;
-      justify-content: flex-end;
-      gap: 4rem;
-    }
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    position: relative;
+    z-index: 10;
+  }
 
-    nav a {
-      display: block;
-    }
+  .logo {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .nav_menu {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  .nav_flags {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+  }
+
+  nav a {
+    display: block;
+  }
   }
 </style>

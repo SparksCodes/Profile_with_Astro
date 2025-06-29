@@ -2,18 +2,27 @@
   "basics": {
     "name": "Pedro",
     "greet": "¡Hola, soy",
-    "label": "full stack",
+    "label": "ciberseguridad",
+    "skill": "full stack",
     "image": "../profile_face.webp",
-    "firstSummary":"Aspirante a desarrollador",
-    "summary": "con una sólida experiencia como técnico en el sector industrial. Destacando mi",
-    "secondSummary": "a cualquier situación y proyecto.",
+    "firstSummary": "Profesional en transición hacia el ámbito de la",
+    "summary": ", con una sólida trayectoria como técnico en el sector industrial. Formado en desarrollo",
+    "secondSummary": " y reconocido por mi",
+    "thirdSummary": "a cualquier situación y proyecto.",
     "highlight": "alta capacidad de adaptación",
     "projects": "Proyectos",
     "experience": "Experiencia",
+    "certificates": "Estudios",
     "downloadCV": "Descarga CV",
     "cta": "Hablemos!!",
+    "coffeeCTA": " • Gracias por valorar mi trabajo ",
+    "coffeeTitle": "Elige Café !!",
+    "oneCoffee": " 1 Café - 1.50€",
+    "twoCoffee": " 2 Café - 3.00€",
+    "anotherCoffee": "Cantidad libre",
+    "close": "Cerrar",
     "blinker": "Disponible para trabajar",
-    
+
     "profiles": [
       {
         "network": "",
@@ -24,12 +33,20 @@
   },
   "work": [
     {
+      "company": "IES Caminás",
+      "address": "Castellón de la Plana",
+      "position": "Estudiante",
+      "startDate": "2024",
+      "endDate": "2025",
+      "summary": "Estuve cursando un máster de ciberseguridad enfocado en proyectos reales. A lo largo del curso, trabajamos en el bastionado completo de redes, desde la protección de equipos finales como PCs de usuario hasta la implementación de VPNs para interconectar sedes. También abordamos el análisis forense, recuperando datos con herramientas especializadas; la securización de entornos en producción mediante Docker y Kubernetes, complementada con auditorías basadas en OWASP; y finalmente, realizamos prácticas de hacking ético, ejecutando ataques controlados con diversas herramientas del sector."
+    },
+    {
       "company": "Bit2me",
       "address": "Alicante",
       "position": "Frontend developer con Flutter",
       "startDate": "2024",
       "endDate": "2024",
-      "summary": "Realicé mis prácticas de desarrollo de aplicaciones multiplataforma con el equipo de desarrollo, donde trabajé en la creación de una aplicación utilizando Flutter. Esta experiencia me permitió contribuir al diseño y funcionalidad de la app, mejorar mis habilidades en desarrollo multiplataforma y profundizar en el uso y las capacidades de Flutter."
+      "summary": "Participé activamente en el desarrollo de una aplicación multiplataforma utilizando Flutter, colaborando con el equipo de desarrollo en tareas de diseño, lógica y usabilidad. Esta experiencia me permitió aplicar prácticas modernas de desarrollo móvil, optimizar la experiencia de usuario y reforzar mis habilidades técnicas en entornos colaborativos."
     },
     {
       "company": "PaynoPain Solutions S.L.",
@@ -37,7 +54,7 @@
       "position": "Frontend developer con React",
       "startDate": "2023",
       "endDate": "2024",
-      "summary": "Realicé mis prácticas de desarrollo de aplicaciones web junto al equipo de frontend, donde trabajé en la creación de una sección de la aplicación del sistema de pagos basada en React. Esta experiencia me permitió contribuir al diseño y funcionalidad de la app, mejorar mis habilidades en desarrollo frontend y profundizar en el funcionamiento del sistema de pagos."
+      "summary": "Me integré en el equipo de frontend para desarrollar funcionalidades clave de una aplicación web de pagos utilizando React. Contribuí a la implementación de componentes reutilizables y al diseño responsivo, con un enfoque constante en mejorar la experiencia de usuario. Esta experiencia reforzó mis conocimientos en desarrollo frontend, colaboración con Git y trabajo bajo metodologías ágiles."
     },
     {
       "company": "Kerajet S.A.",
@@ -77,7 +94,7 @@
       "position": "Propietario",
       "startDate": "2006",
       "endDate": "2008",
-      "summary": "Gestión general de la empresa, así como la organización de las obras, personal y trámites burocráticos."
+      "summary": "Gestión integral de la empresa, incluyendo la planificación y coordinación de obras, supervisión de personal y gestión de trámites administrativos y legales. Desarrollé habilidades de liderazgo, organización y toma de decisiones en un entorno dinámico y orientado a resultados."
     },
     {
       "company": "Estudio Cerámico S.L.",
@@ -88,20 +105,52 @@
       "summary": "Mantenimiento eléctrico y mecánico de la fábrica, identificación y resolución de averías en las diferentes líneas de producción. Realización del plan de mantenimiento preventivo de la planta. Programación de autómatas, variadores de frecuencia e instalación. Manipulación y resolución de averías en controles PID, instalaciones hidráulicas y neumáticas."
     }
   ],
-  
+
   "education": [
     {
-      "institution": "",
-      "url": "",
-      "area": "",
-      "studyType": "",
-      "startDate": "",
-      "endDate": "",
-      "score": "",
-      "courses": [""]
-    }
+    "institution": "IES El Caminás, Castellón de la Plana",
+    "studyType": "Experto en Ciberseguridad",
+    "startDate": "2024",
+    "endDate": "2025"
+  },
+  {
+    "institution": "Aula Campus, Burjassot, Valencia",
+    "studyType": "Desarrollo de aplicaciones Multiplataforma",
+    "startDate": "2023",
+    "endDate": "2024"
+  },
+  {
+    "institution": "Aula Campus, Burjassot, Valencia",
+    "studyType": "Desarrollo de aplicaciones Web",
+    "startDate": "2021",
+    "endDate": "2023"
+  },
+  {
+    "institution": "ASET International Oil & Gas Trainning Academy, Aberdeen, UK",
+    "studyType": "17th Edition IEE Wiring Regulations, City & Guilds 2382",
+    "startDate": "2014",
+    "endDate": "2014"
+  },
+  {
+    "institution": "IES Serra d'Espadà, Onda, Castellón de la Plana",
+    "studyType": "Sistemas de Regulación y controles automáticos",
+    "startDate": "2010",
+    "endDate": "2013"
+  },
+  {
+    "institution": "IES Politècnic, Castellón de la Plana",
+    "studyType": "Electrotécnica",
+    "startDate": "2010",
+    "endDate": "2013"
+  },
+  {
+    "institution": "IES Politècnic, Castellón de la Plana",
+    "studyType": "Electrónica Industrial",
+    "startDate": "1994",
+    "endDate": "1999"
+  }
   ],
- 
+
   "certificates": [
     {
       "name": "",
@@ -110,8 +159,20 @@
       "url": ""
     }
   ],
-  
+
   "projects": [
+    {
+      "name": "INTEGRITYCHECK",
+      "description": "Aplicación para verificar y comparar hashes de archivos usando diferentes algoritmos.",
+      "url": "https://github.com/SparksCodes/IntegrityCheck",
+      "tech": ["javascript", "html", "css", "electron"]
+    },
+    {
+      "name": "CRYPTER",
+      "description": "Herramienta en Bash para cifrar, descifrar y generar contraseñas seguras desde la terminal.",
+      "url": "https://github.com/SparksCodes/Crypter",
+      "tech": ["bash"]
+    },
     {
       "name": "DRIPPINK",
       "description": "Herramienta para el cálculo de descarga de tinta de una impresora en el ámbito industrial.",

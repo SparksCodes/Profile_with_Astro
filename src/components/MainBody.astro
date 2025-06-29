@@ -5,6 +5,7 @@ import SvgGithub from "./SvgGithub.astro";
 import SvgLinkedIn from "./SvgLinkedIn.astro";
 import SvgWhatsApp from "./SvgWhatsApp.astro";
 import Blinker from "./Blinker.astro";
+import CoffeeCTA from "./CoffeeCTA.astro";
 
 const { currentLocale } = Astro;
 const i18n = getI18N({ currentLocale });
@@ -12,7 +13,14 @@ const i18n = getI18N({ currentLocale });
 
 <section class="main">
   <div class="main_image">
-    <img src={i18n.basics.image} alt="image_profile" />
+    <picture>
+      <img
+        src={i18n.basics.image}
+        width="490"
+        height="419"
+        alt="image_profile"
+      />
+    </picture>
     <Blinker />
   </div>
   <section class="description">
@@ -27,8 +35,10 @@ const i18n = getI18N({ currentLocale });
       {i18n.basics.firstSummary}
       <span id="imp">{i18n.basics.label}</span>
       {i18n.basics.summary}
-      <span id="imp">{i18n.basics.highlight}</span>
+      <span id="imp">{i18n.basics.skill}</span>
       {i18n.basics.secondSummary}
+      <span id="imp">{i18n.basics.highlight}</span>
+      {i18n.basics.thirdSummary}
     </p>
 
     <div class="first_group">
@@ -73,7 +83,12 @@ const i18n = getI18N({ currentLocale });
           </a>
         </div>
       </div>
-      <DownloadCV />
+      <div class="download_btn">
+        <DownloadCV />
+      </div>
+      <div class="coffee_btn">
+        <CoffeeCTA />
+      </div>
     </div>
   </section>
 </section>
@@ -82,7 +97,7 @@ const i18n = getI18N({ currentLocale });
   .main {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    padding-bottom: 10rem;
+    padding: 2rem 20rem 10rem 20rem;
     gap: 2rem;
   }
   .main_image {
@@ -97,6 +112,7 @@ const i18n = getI18N({ currentLocale });
     color: transparent;
   }
   .description {
+    width: 90%;
     height: 28rem;
     display: flex;
     flex-direction: column;
@@ -104,7 +120,7 @@ const i18n = getI18N({ currentLocale });
   }
   .main_title,
   .main_paragraph {
-    font-size: 1.75rem;
+    font-size: 1.7rem;
     line-height: 2.5rem;
     color: var(--primary);
   }
@@ -169,43 +185,66 @@ const i18n = getI18N({ currentLocale });
   }
   @media (max-width: 480px) {
     .main {
-      width: 93vw;
       display: flex;
       flex-direction: column;
-      padding-bottom: 2rem;
-      position: relative;
-      left: auto;
-      right: auto;
+      align-items: center;
+      justify-content: center;
+      width: 100vw;
+      padding: 1rem 1rem;
+      gap: 1rem;
     }
-    .main_image {
-      padding-top: 7rem;
-    }
+
     img {
-      height: 22rem;
-      width: 28rem;
+      height: 18rem;
+      width: 24rem;
     }
     .description {
-      height: 35rem;
+      width: 100%;
+      height: auto;
     }
     .main_title,
     .main_paragraph {
-      font-size: 1.8rem;
-      line-height: 2.7rem;
+      font-size: 1.3rem;
+      line-height: 2.5rem;
+      word-break: break-word;
+      overflow-wrap: break-word;
     }
     #imp::after {
-      position: absolute;
-      content: "";
-      width: 100%;
-      height: 12px;
-      background: none;
-    }
-    .first_group {
-      position: relative;
-      margin-left: -22px;
+      display: none;
     }
     .first_group,
     .nav_icons {
       gap: 2rem;
+    }
+
+    .first_group {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 1rem;
+      gap: 1rem;
+      width: 100%;
+    }
+    .nav_icons {
+      justify-content: space-around;
+      width: 100%;
+    }
+
+    .nav_icons a {
+      flex: 1;
+      text-align: center;
+    }
+
+    .download_btn {
+      display: block;
+      text-align: center;
+      width: 100%;
+    }
+
+    .coffee_btn {
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
     }
   }
 </style>

@@ -34,18 +34,19 @@ const i18n = getI18N({ currentLocale });
     font-size: 1.5rem;
     font-weight: 900;
     letter-spacing: 0.1rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     color: var(--primary);
   }
   .projects_container {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
+    justify-items: center;
   }
 
   @media (max-width: 480px) {
     .project_title {
-      margin-left: 2rem;
+      margin-left: 0;
     }
 
     .projects_container {

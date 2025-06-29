@@ -108,8 +108,13 @@ const { title, description, gitHref, tech } = Astro.props;
   }
   @media (max-width: 480px) {
     .main_container {
-      margin-left: 3rem;
-      width: 23rem;
+      width: 90%;
+      max-width: 23rem;
+      margin: 0 auto;
+    }
+
+    .description {
+      padding-bottom: 0.5rem;
     }
   }
 </style>

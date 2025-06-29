@@ -28,61 +28,46 @@ const i18n = getI18N({ currentLocale });
 
 <style>
   .main__container {
-    position: absolute;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    width: 30%;
-    top: 31rem;
-    left: 27rem;
-    line-height: 4rem;
-  }
-  .container__title {
-    font-family: "Kristi";
-    letter-spacing: 0.2rem;
-    font-size: 5rem;
-    font-weight: 400;
-    padding-top: 6rem;
-    color: var(--secondary);
-    text-shadow: 2px 2px 4px rgb(0, 0, 0);
-  }
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 30%;
+  top: 31rem;
+  left: 22%;
+  line-height: 4rem;
+}
 
-  .path_line {
-    fill: none;
-    stroke: var(--primary);
-    stroke-width: 1;
-  }
+.container__title {
+  font-family: "Kristi", cursive;
+  letter-spacing: 0.2rem;
+  font-size: 5rem;
+  padding-top: 6rem;
+  margin-left: 12rem;
+  color: var(--secondary);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+}
 
-  .path_line {
-    --totalLenght: 242.23146057128906;
+.path_line {
+  fill: none;
+  stroke: var(--primary);
+  stroke-width: 1;
+  stroke-dasharray: var(--totalLength, 242.23);
+  stroke-dashoffset: var(--totalLength, 242.23);
+  transition: stroke-dashoffset 1s ease-in-out;
+  animation: draw 3s ease-in-out 5 forwards;
+}
 
-    stroke-dasharray: var(--totalLenght);
-    stroke-dashoffset: var(--totalLenght);
-    transition: stroke-dashoffset 1s ease-in-out;
-    animation: draw 3s ease-in-out 5 forwards;
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0;
   }
+}
 
-  @keyframes draw {
-    to {
-      stroke-dashoffset: 0;
-    }
+@media (max-width: 480px) {
+  .main__container {
+    display: none;
   }
-  @media (max-width: 1800px) {
-    .main__container {
-      display: block;
-      top: 36rem;
-      left: 9rem;
-    }
-    .container__img {
-      position: absolute;
-      top: -2rem;
-      left: 16rem;
-    }
-  }
-  @media (max-width: 480px) {
-    .main__container {
-      display: none;
-    }
-  }
+}
 </style>

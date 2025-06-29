@@ -46,7 +46,7 @@ const { i, company, position, startYear, endYear, address, summary } =
     transition: all 0.35s;
   }
   .container input:checked ~ .container__content {
-    max-height: 11rem;
+    max-height: 21rem;
   }
   .main_container {
     box-shadow: 3px 3px 10px var(--primary);
@@ -128,10 +128,9 @@ const { i, company, position, startYear, endYear, address, summary } =
   @media (max-width: 480px) {
     .main_container {
       padding: 0 0.3rem;
-      position: relative;
+      position: static;
       left: 0.8rem;
-      right: auto;
-      width: 100vw;
+      width: 100%;
     }
     .skill {
       font-size: 0.8rem;
@@ -140,12 +139,24 @@ const { i, company, position, startYear, endYear, address, summary } =
       font-size: 1rem;
     }
     .container input:checked ~ .container__content {
-      max-height: 22rem;
+      max-height: 25rem;
     }
+    .container {
+    padding: 0 0.1rem;
+  }
+  .container__label {
+    justify-content: flex-start;
+    gap: 1rem;
+    padding: 0.5rem;
+  }
     .container__content p {
       line-height: 1.2rem;
       letter-spacing: 0;
-      padding: 0.5rem 1.3rem;
+      padding: 0.3rem .3rem;
     }
+    .container_years p {
+    font-size: 1.15rem;
+    font-weight: 500;
+  }
   }
 </style>

@@ -1,0 +1,144 @@
+---
+const { currentLocale } = Astro;
+import { getI18N } from "@/i18n";
+const i18n = getI18N({ currentLocale });
+---
+
+<div class="circle-container" onclick="openModal()">
+  <svg
+    viewBox="0 0 200 200"
+    class="text-circle"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <defs>
+      <path
+        id="circlePath"
+        d="M100,100 m-75,0 a75,75 0 1,1 150,0 a75,75 0 1,1 -150,0"></path>
+    </defs>
+    <text>
+      <textPath
+        href="#circlePath"
+        startOffset="0"
+        textLength="460"
+        class="rotating-text"
+      >
+        {i18n.basics.coffeeCTA}
+      </textPath>
+    </text>
+  </svg>
+
+  <img src="/coffee.png" alt="Café" class="center-coffee" />
+</div>
+
+<!-- Modal -->
+<div id="donationModal" class="modal hidden">
+  <div class="modal-content">
+    <img src="/coffee.png" alt="Café" class="coffee-cup" />
+    <h2>{i18n.basics.coffeeTitle}</h2>
+    <div class="buttons">
+      <a href="https://buy.stripe.com/9B66oG2zOat4eOy81X9IQ00" target="blank"
+        >{i18n.basics.oneCoffee}</a
+      >
+      <a href="https://buy.stripe.com/dRm14ma2g58Kayi5TP9IQ01" target="blank"
+        >{i18n.basics.twoCoffee}</a
+      >
+      <a href="https://buy.stripe.com/00wdR8gqE7gSayi6XT9IQ02" target="blank"
+        >{i18n.basics.anotherCoffee}</a
+      >
+    </div>
+    <button onclick="closeModal()">{i18n.basics.close}</button>
+  </div>
+</div>
+
+<style>
+  .circle-container {
+    position: relative;
+    width: 9rem;
+    height: 9rem;
+    cursor: pointer;
+  }
+
+  .text-circle {
+    width: 100%;
+    height: 100%;
+  }
+
+  .rotating-text {
+    fill: var(--primary);
+    font-size: 0.75rem;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  .center-coffee {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 60px;
+    height: auto;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+  }
+
+  /* Modal */
+  .modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.8);
+    display: grid;
+    place-items: center;
+    z-index: 50;
+  }
+
+  h2 {
+    margin-bottom: 2rem;
+  }
+
+  .modal.hidden {
+    display: none;
+  }
+
+  .modal-content {
+    background: var(--bg-primary);
+    padding: 3rem;
+    margin: 3rem;
+    border-radius: 1rem;
+    text-align: center;
+  }
+
+  .modal-content .buttons a {
+    display: block;
+    font-weight: 500;
+    margin: 0.5rem 0;
+    padding: 0.8rem 1.6rem;
+    color: var(--primary_circle);
+    background-color: var(--secondary);
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    box-shadow: 3px 3px 10px var(--primary);
+  }
+
+  .modal-content button {
+    color: var(--bg-primary);
+    margin-top: 2rem;
+    padding: 0.5rem 1rem;
+    background: var(--primary_circle);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .coffee-cup {
+    width: 60px;
+    height: auto;
+  }
+
+  @media (max-width: 480px) {
+    .circle-container {
+      position: relative;
+      width: auto;
+      height: 12rem;
+      cursor: pointer;
+    }
+  }
+</style>

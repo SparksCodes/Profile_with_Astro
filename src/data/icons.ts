@@ -9,6 +9,16 @@ export interface IconMap {
 }
 
 const icons: IconMap = {
+  bash: {
+    path: "../bash_icon.svg",
+    alt: "icono de bash",
+    name: "Bash"
+  },
+  javascript: {
+    path: "../js_icon.svg",
+    alt: "icono de javascript",
+    name: "JavaScript"
+  },
   dart: {
     path: "../dart_icon.svg",
     alt: "icono de dart",

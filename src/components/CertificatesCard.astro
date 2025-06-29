@@ -1,0 +1,102 @@
+---
+export interface Props {
+  institution?: string;
+  studyType?: string;
+  startDate?: string;
+  endDate?: string;
+  i: number;
+}
+
+const { i, institution, studyType, startDate, endDate } = Astro.props;
+---
+
+<section class="main_container">
+  <div class="container">
+    <label for={`ca${i}`} class="container__label">
+      <div class="container_years">
+        <p>{endDate}</p>
+        <p>{startDate}</p>
+      </div>
+      <div class="studies">
+        <p class="course">{studyType}</p>
+        <p class="institution">{institution}</p>
+      </div>
+    </label>
+  </div>
+</section>
+
+<style>
+  .main_container {
+    box-shadow: 3px 3px 10px var(--primary);
+    color: var(--primary);
+    border: 1px solid var(--primary);
+    border-radius: 1rem;
+    background-color: var(--bg-primary);
+    width: 60%;
+    margin: auto;
+    padding: 0 1rem;
+    overflow: hidden;
+  }
+  .container {
+    padding: 0 0.5rem;
+  }
+  .container input {
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
+  }
+  .container__label {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2rem;
+    padding: 0.5rem;
+    color: var(--primary);
+    background-color: var(--bg-primary);
+  }
+  .container_years,
+  .studies {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    line-height: 1.5rem;
+  }
+  .container_years p {
+    font-weight: 500;
+    font-size: 1.2rem;
+  }
+
+  .studies {
+    font-size: 1rem;
+  }
+  .course {
+    font-size: 1.3rem;
+    font-weight: 500;
+  }
+  .institution {
+    font-size: 0.9rem;
+  }
+  @media (max-width: 480px) {
+    .main_container {
+      width: 100%;
+      margin: 0 auto;
+      padding: 0 0.3rem;
+    }
+    .container {
+      padding: 0 0.3rem;
+    }
+    .container__label {
+      gap: 1rem;
+      padding: 0.3rem;
+    }
+    .container_years p {
+      font-size: 1.1rem;
+    }
+    .institution {
+      font-size: 0.6rem;
+    }
+    .course {
+      font-size: 1rem;
+    }
+  }
+</style>
